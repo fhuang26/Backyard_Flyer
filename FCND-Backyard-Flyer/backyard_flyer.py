@@ -130,7 +130,7 @@ class BackyardFlyer(Drone):
         2. Transition to WAYPOINT state
         """
         print("waypoint transition")
-        #  0 <= self.waypoint_index <= 3
+        #  the drone flies to positions 0 -> 1 -> 2 -> 3 (home) to complete a square and then land
         pos = self.all_waypoints[self.waypoint_index]
         self.cmd_position(*pos)
         self.flight_state = States.WAYPOINT
